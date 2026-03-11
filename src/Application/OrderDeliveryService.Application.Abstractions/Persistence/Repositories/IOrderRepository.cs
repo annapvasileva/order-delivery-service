@@ -10,5 +10,6 @@ public interface IOrderRepository
         CancellationToken cancellationToken);
     
     IAsyncEnumerable<Order> GetAllAsync(
+        GetAllOrdersRepositoryRequest request,
         CancellationToken cancellationToken);
 }

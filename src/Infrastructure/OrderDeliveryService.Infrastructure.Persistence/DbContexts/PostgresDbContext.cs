@@ -19,7 +19,8 @@ public class PostgresDbContext : DbContext
             entity.HasKey(x => x.OrderId);
 
             entity.Property(x => x.OrderId)
-                .HasColumnName("order_id");
+                .HasColumnName("order_id")
+                .ValueGeneratedOnAdd();
 
             entity.Property(x => x.SendersCity)
                 .HasColumnName("senders_city");
@@ -36,7 +37,7 @@ public class PostgresDbContext : DbContext
             entity.Property(x => x.CargoWeight)
                 .HasColumnName("cargo_weight");
 
-            entity.Property(x => x.CargoCollectionDate.ToUniversalTime())
+            entity.Property(x => x.CargoCollectionDate)
                 .HasColumnName("cargo_collection_date");
         });
     }
