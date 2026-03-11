@@ -11,6 +11,8 @@
   <Folder Name="/src/Infrastructure/">
     <Project Path="src\Infrastructure\OrderDeliveryService.Infrastructure.Persistence\OrderDeliveryService.Infrastructure.Persistence.csproj" Type="Classic C#" />
   </Folder>
-  <Folder Name="/src/Presentation/" />
+  <Folder Name="/src/Presentation/">
+    <Project Path="src\Presentation\OrderDeliveryService.Presentation\OrderDeliveryService.Presentation.csproj" Type="Classic C#" />
+  </Folder>
   <Folder Name="/tests/" />
 </Solution>
