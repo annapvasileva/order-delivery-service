@@ -1,0 +1,16 @@
+﻿<Solution>
+  <Folder Name="/src/">
+    <Project Path="src\OrderDeliveryService\OrderDeliveryService.csproj" Type="Classic C#" />
+  </Folder>
+  <Folder Name="/src/Application/">
+    <Project Path="src\Application\OrderDeliveryService.Application.Abstractions\OrderDeliveryService.Application.Abstractions.csproj" Type="Classic C#" />
+    <Project Path="src\Application\OrderDeliveryService.Application.Contracts\OrderDeliveryService.Application.Contracts.csproj" Type="Classic C#" />
+    <Project Path="src\Application\OrderDeliveryService.Application.Models\OrderDeliveryService.Application.Models.csproj" Type="Classic C#" />
+    <Project Path="src\Application\OrderDeliveryService.Application\OrderDeliveryService.Application.csproj" Type="Classic C#" />
+  </Folder>
+  <Folder Name="/src/Infrastructure/">
+    <Project Path="src\Infrastructure\OrderDeliveryService.Infrastructure.Persistence\OrderDeliveryService.Infrastructure.Persistence.csproj" Type="Classic C#" />
+  </Folder>
+  <Folder Name="/src/Presentation/" />
+  <Folder Name="/tests/" />
+</Solution>
