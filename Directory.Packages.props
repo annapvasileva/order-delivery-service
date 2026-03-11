@@ -8,9 +8,14 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageVersion>
+    <PackageVersion Include="FluentMigrator" Version="8.0.1" />
+    <PackageVersion Include="FluentMigrator.Extensions.Postgres" Version="8.0.1" />
+    <PackageVersion Include="FluentMigrator.Runner" Version="8.0.1" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="9.0.14" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.14" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.14" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="9.0.14" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="9.0.14" />
     <PackageVersion Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
     <PackageVersion Include="xunit" Version="2.9.3" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.4">
