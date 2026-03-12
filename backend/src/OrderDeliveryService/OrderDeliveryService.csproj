@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
@@ -9,6 +9,12 @@
 
     <ItemGroup>
       <PackageReference Include="Swashbuckle.AspNetCore" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Application\OrderDeliveryService.Application\OrderDeliveryService.Application.csproj" />
+      <ProjectReference Include="..\Infrastructure\OrderDeliveryService.Infrastructure.Persistence\OrderDeliveryService.Infrastructure.Persistence.csproj" />
+      <ProjectReference Include="..\Presentation\OrderDeliveryService.Presentation\OrderDeliveryService.Presentation.csproj" />
     </ItemGroup>
 
 </Project>
