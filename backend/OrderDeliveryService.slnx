@@ -14,5 +14,7 @@
   <Folder Name="/src/Presentation/">
     <Project Path="src\Presentation\OrderDeliveryService.Presentation\OrderDeliveryService.Presentation.csproj" Type="Classic C#" />
   </Folder>
-  <Folder Name="/tests/" />
+  <Folder Name="/tests/">
+    <Project Path="tests\OrderDeliveryService.Tests\OrderDeliveryService.Tests.csproj" Type="Classic C#" />
+  </Folder>
 </Solution>
