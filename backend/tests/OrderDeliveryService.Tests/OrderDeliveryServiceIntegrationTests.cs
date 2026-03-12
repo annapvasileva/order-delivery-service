@@ -22,13 +22,14 @@ public class OrderDeliveryServiceIntegrationTests : IClassFixture<PostgreSqlFixt
         var repository = new OrderRepository(context);
         var service = new OrderService(repository);
 
+        DateTimeOffset date = DateTimeOffset.UtcNow;
         var request = new CreateOrder.Request(
             "Helsinki",
             "Street 1",
             "Espoo",
             "Street 2",
             12.5m,
-            DateTime.UtcNow);
+            date);
 
         // Act
         var result = await service.CreateOrderAsync(request, CancellationToken.None);
@@ -38,7 +39,11 @@ public class OrderDeliveryServiceIntegrationTests : IClassFixture<PostgreSqlFixt
 
         Assert.True(success.Order.OrderId > 0);
         Assert.Equal("Helsinki", success.Order.SendersCity);
+        Assert.Equal("Street 1", success.Order.SendersAddress);
         Assert.Equal("Espoo", success.Order.RecipientsCity);
+        Assert.Equal("Street 2", success.Order.RecipientsAddress);
+        Assert.Equal(12.5m, success.Order.CargoWeight);
+        Assert.Equal(date, success.Order.CargoCollectionDate);
     }
 
     [Fact]
@@ -75,7 +80,7 @@ public class OrderDeliveryServiceIntegrationTests : IClassFixture<PostgreSqlFixt
     }
 
     [Fact]
-    public async Task GetAllAsync_ShouldReturnPageToken_WhenPageFull()
+    public async Task GetAllAsync_ItemsCountEqualsPageSize_ReturnItemsAndPageToken()
     {
         // Arrange
         await using var context = DbContextFactory.Create(_fixture.ConnectionString);
