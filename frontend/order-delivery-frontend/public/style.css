@@ -8,3 +8,8 @@
 @import "footer/footer.css";
 @import "loader/loader.css";
 @import "error-message/error-message.css";
+@import "sidebar/sidebar.css";
+@import "sidebar/__link/sidebar__link.css";
+@import "sidebar/__list/sidebar__list.css";
+@import "sidebar/__nav/sidebar__nav.css";
+@import "sidebar/__position/sidebar__position.css";

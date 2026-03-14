@@ -1,0 +1,23 @@
+.sidebar__link {
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar__link:hover {
+    background-color: var(--main-color);
+    color: var(--hover-color);
+    text-decoration: none;
+}
+
+.sidebar__link_active {
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+}
