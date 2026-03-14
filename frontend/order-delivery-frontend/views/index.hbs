@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+{{> head title="Order Delivery"}}
+
+<body>
+
+{{> header title="Заказы" }}
+
+{{#> content}}
+    <section class="orders">
+        <h2 class="orders__title">Заказы</h2>
+        <ol class="orders__list" id="orders-list"></ol>
+
+        <template id="order-template">
+            <div class="order__position">
+                <article class="order-card">
+                    <img class="order-card__image" src="" alt="Order preview">
+                    <h3 class="order-card__title">Loading...</h3>
+                </article>
+            </div>
+        </template>
+    </section>
+{{/content}}
+
+{{> footer}}
+
+{{> loader text="Loading..." }}
+
+<div class="error-message" id="error" style="display:none;"></div>
+
+<script src="/orders/__list/orders__list.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+.order-card__image {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 5px solid var(--main-color);
+}

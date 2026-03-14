@@ -1,0 +1,10 @@
+@import "common.css";
+@import "header/header.css";
+@import "header/__title/header__title.css";
+@import "main/main.css";
+@import "order-card/__image/order-card__image.css";
+@import "order-card/__title/order-card__title.css";
+@import "order-card/order-card.css";
+@import "footer/footer.css";
+@import "loader/loader.css";
+@import "error-message/error-message.css";

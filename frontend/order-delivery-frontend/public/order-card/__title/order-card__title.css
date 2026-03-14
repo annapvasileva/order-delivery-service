@@ -1,0 +1,6 @@
+.order-card__title {
+    font-size: 1em;
+    margin: 0;
+    font-weight: 600;
+    color: var(--main-color)
+}

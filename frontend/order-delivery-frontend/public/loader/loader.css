@@ -1,0 +1,9 @@
+.loader {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+}
+
+.loader.show {
+    display: block;
+}

@@ -1,0 +1,7 @@
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9em;
+    margin-top: 8px;
+    font-weight: 500;
+    animation: fadeIn 0.3s ease;
+}
