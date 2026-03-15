@@ -2,6 +2,11 @@ const { useState } = React;
 
 function CreateOrderForm() {
 
+    const API_BASE =
+        window.location.hostname === "localhost"
+            ? "http://localhost:5002"
+            : "http://order-delivery-service-backend:5002";
+
     const [form, setForm] = useState({
         sendersCity: "",
         sendersAddress: "",
@@ -32,7 +37,7 @@ function CreateOrderForm() {
         try {
 
             const response = await fetch(
-                "http://order-delivery-service-backend:5002/v1/orders",
+                `${API_BASE}/v1/orders`,
                 {
                     method: "POST",
                     headers: {

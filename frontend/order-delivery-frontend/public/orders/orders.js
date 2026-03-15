@@ -10,10 +10,15 @@ function OrdersList() {
         loadOrders();
     }, []);
 
+    const API_BASE =
+        window.location.hostname === "localhost"
+            ? "http://localhost:5002"
+            : "http://order-delivery-service-backend:5002";
+
     async function loadOrders() {
         try {
             const response = await fetch(
-                "http://order-delivery-service-backend:5002/v1/orders?pageSize=10"
+                `${API_BASE}/v1/orders?pageSize=10`
             );
 
             if (!response.ok) {

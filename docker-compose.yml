@@ -1,6 +1,7 @@
 services:
   postgres-order-delivery-service:
     image: postgres:16
+    container_name: postgres-order-delivery-service
     environment:
       POSTGRES_DB: postgres-orders
       POSTGRES_USER: user
@@ -17,6 +18,7 @@ services:
   
   order-delivery-service-backend:
     image: ghcr.io/annapvasileva/order-delivery-service-backend:main
+    container_name: order-delivery-service-backend
     platform: linux/amd64
     networks:
       - internal
@@ -28,6 +30,7 @@ services:
   
   order-delivery-service-frontend:
     image: ghcr.io/annapvasileva/order-delivery-service-frontend:main
+    container_name: order-delivery-service-frontend
     platform: linux/amd64
     networks:
       - public
@@ -35,6 +38,8 @@ services:
     depends_on:
       order-delivery-service-backend:
         condition: service_started
+    environment:
+      - PORT=3001
     ports:
       - "3001:3001"
 
