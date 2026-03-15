@@ -13,7 +13,7 @@ function OrdersList() {
     async function loadOrders() {
         try {
             const response = await fetch(
-                "http://localhost:5002/v1/orders?pageSize=10"
+                "http://order-delivery-service-backend:5002/v1/orders?pageSize=10"
             );
 
             if (!response.ok) {

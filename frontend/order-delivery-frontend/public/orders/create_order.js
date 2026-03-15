@@ -32,7 +32,7 @@ function CreateOrderForm() {
         try {
 
             const response = await fetch(
-                "http://localhost:5002/v1/orders",
+                "http://order-delivery-service-backend:5002/v1/orders",
                 {
                     method: "POST",
                     headers: {

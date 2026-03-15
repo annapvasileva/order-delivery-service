@@ -13,7 +13,30 @@ services:
       timeout: 30s
       retries: 5
     networks:
-      - app_network
+      - internal
+  
+  order-delivery-service-backend:
+    image: ghcr.io/annapvasileva/order-delivery-service-backend:main
+    platform: linux/amd64
+    networks:
+      - internal
+    depends_on:
+      postgres-order-delivery-service:
+        condition: service_healthy
+    ports:
+      - "5002:5002"
+  
+  order-delivery-service-frontend:
+    image: ghcr.io/annapvasileva/order-delivery-service-frontend:main
+    platform: linux/amd64
+    networks:
+      - public
+      - internal
+    depends_on:
+      order-delivery-service-backend:
+        condition: service_started
+    ports:
+      - "3001:3001"
 
   pgadmin:
     container_name: pgadmin-order-delivery
@@ -28,8 +51,12 @@ services:
       - PGADMIN_CONFIG_SERVER_MODE=False
       - PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED=False
     networks:
-      - app_network
+      - internal
+      - public
 
 networks:
-  app_network:
+  public:
     driver: bridge
+  internal:
+    driver: bridge
+    internal: true
