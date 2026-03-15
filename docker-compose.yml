@@ -21,6 +21,7 @@ services:
     container_name: order-delivery-service-backend
     platform: linux/amd64
     networks:
+      - order-delivery-service-network
       - internal
     depends_on:
       postgres-order-delivery-service:
@@ -33,7 +34,7 @@ services:
     container_name: order-delivery-service-frontend
     platform: linux/amd64
     networks:
-      - public
+      - order-delivery-service-network
       - internal
     depends_on:
       order-delivery-service-backend:
@@ -56,11 +57,11 @@ services:
       - PGADMIN_CONFIG_SERVER_MODE=False
       - PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED=False
     networks:
+      - order-delivery-service-network
       - internal
-      - public
 
 networks:
-  public:
+  order-delivery-service-network:
     driver: bridge
   internal:
     driver: bridge
