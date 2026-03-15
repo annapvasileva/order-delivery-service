@@ -75,6 +75,7 @@ function CreateOrderForm() {
         { className: "order-form", onSubmit: handleSubmit },
 
         React.createElement("input", {
+            class: "order-form__input",
             name: "sendersCity",
             placeholder: "Город отправителя",
             value: form.sendersCity,
@@ -83,6 +84,7 @@ function CreateOrderForm() {
         }),
 
         React.createElement("input", {
+            class: "order-form__input",
             name: "sendersAddress",
             placeholder: "Адрес отправителя",
             value: form.sendersAddress,
@@ -91,6 +93,7 @@ function CreateOrderForm() {
         }),
 
         React.createElement("input", {
+            class: "order-form__input",
             name: "recipientsCity",
             placeholder: "Город получателя",
             value: form.recipientsCity,
@@ -99,6 +102,7 @@ function CreateOrderForm() {
         }),
 
         React.createElement("input", {
+            class: "order-form__input",
             name: "recipientsAddress",
             placeholder: "Адрес получателя",
             value: form.recipientsAddress,
@@ -107,6 +111,7 @@ function CreateOrderForm() {
         }),
 
         React.createElement("input", {
+            class: "order-form__input",
             type: "number",
             name: "cargoWeight",
             placeholder: "Вес груза",
@@ -116,6 +121,7 @@ function CreateOrderForm() {
         }),
 
         React.createElement("input", {
+            class: "order-form__input",
             type: "date",
             name: "cargoCollectionDate",
             value: form.cargoCollectionDate,
@@ -125,7 +131,11 @@ function CreateOrderForm() {
 
         React.createElement(
             "button",
-            { type: "submit", disabled: loading },
+            {
+                class: "order-form__button",
+                type: "submit",
+                disabled: loading
+            },
             loading ? "Создание..." : "Создать заказ"
         ),
 

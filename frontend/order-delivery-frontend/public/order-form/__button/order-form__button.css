@@ -1,0 +1,15 @@
+.order-form__button {
+    pointer-events: auto;
+    padding: 8px 12px;
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.order-form__button:hover {
+    background-color: var(--hover-color);
+}

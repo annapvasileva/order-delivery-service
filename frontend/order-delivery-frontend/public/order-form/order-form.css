@@ -1,0 +1,9 @@
+.order-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    max-width: 600px;
+    min-width: 200px;
+}
