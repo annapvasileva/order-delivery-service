@@ -10,10 +10,7 @@ function OrdersList() {
         loadOrders();
     }, []);
 
-    const API_BASE =
-        window.location.hostname === "localhost"
-            ? "http://localhost:5002"
-            : "http://order-delivery-service-backend:5002";
+    const API_BASE = `${window.location.protocol}//${window.location.hostname}:5002`;
 
     async function loadOrders() {
         try {

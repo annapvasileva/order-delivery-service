@@ -48,10 +48,8 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseRouting();
+app.UseCors("AllowAll");
 app.UseMiddleware<ExceptionFormattingMiddleware>();
 app.MapControllers();
-
-app.UseCors("AllowAll");
-
 
 await app.RunAsync();
