@@ -1,5 +1,6 @@
 .order-form__button {
     pointer-events: auto;
+    align-self: flex-start;
     padding: 8px 12px;
     background-color: var(--main-color);
     border: none;
