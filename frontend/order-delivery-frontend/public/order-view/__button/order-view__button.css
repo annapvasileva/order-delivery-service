@@ -1,0 +1,17 @@
+.order-view__button {
+    margin: 10px 0;
+    pointer-events: auto;
+    align-self: flex-start;
+    padding: 8px 12px;
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.order-view__button:hover {
+    background-color: var(--hover-color);
+}

@@ -40,7 +40,7 @@ function OrdersList() {
 
     return React.createElement(
         "div",
-        null,
+        { className: "orders" },
 
         React.createElement(
             "ol",
@@ -64,37 +64,52 @@ function OrdersList() {
             "section",
             { className: "order-view" },
 
-            React.createElement("h3", null, `Order #${selectedOrder.orderId}`),
+            React.createElement(
+                "h3", 
+                { className: "order-view__title" },
+                `Order #${selectedOrder.orderId}`
+            ),
 
-            React.createElement("p", null,
+            React.createElement(
+                "p",
+                { className: "order-view__item" },
                 `Город отправителя: ${selectedOrder.sendersCity}`
             ),
 
-            React.createElement("p", null,
+            React.createElement(
+                "p",
+                { className: "order-view__item" },
                 `Адрес отправителя: ${selectedOrder.sendersAddress}`
             ),
 
-            React.createElement("p", null,
+            React.createElement(
+                "p",
+                { className: "order-view__item" },
                 `Город получателя: ${selectedOrder.recipientsCity}`
             ),
 
-            React.createElement("p", null,
+            React.createElement(
+                "p",
+                { className: "order-view__item" },
                 `Адрес получателя: ${selectedOrder.recipientsAddress}`
             ),
 
-            React.createElement("p", null,
+            React.createElement(
+                "p",
+                { className: "order-view__item" },
                 `Вес груза: ${selectedOrder.cargoWeight}`
             ),
 
             React.createElement(
                 "p",
-                null,
+                { className: "order-view__item" },
                 `Дата забора: ${new Date(selectedOrder.cargoCollectionDate).toLocaleDateString()}`
             ),
 
             React.createElement(
                 "button",
                 {
+                    className: "order-view__button",
                     onClick: () => setSelectedOrder(null)
                 },
                 "Закрыть"

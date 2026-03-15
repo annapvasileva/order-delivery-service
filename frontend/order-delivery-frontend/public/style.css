@@ -16,3 +16,8 @@
 @import "order-form/order-form.css";
 @import "order-form/__button/order-form__button.css";
 @import "order-form/__input/order-form__input.css";
+@import "orders/__item/orders__item.css";
+@import "orders/__list/orders__list.css";
+@import "order-view/order-view.css";
+@import "order-view/__button/order-view__button.css";
+@import "order-view/__item/order-view__item.css";
